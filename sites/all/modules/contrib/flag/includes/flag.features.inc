@@ -44,7 +44,7 @@ function flag_features_export_options() {
 /**
  * Implementation of hook_features_export_render().
  */
-function flag_features_export_render($module = 'foo', $data, $features_export) {
+function flag_features_export_render($module, $data, $features_export = NULL) {
   module_load_include('inc', 'flag', '/includes/flag.export');
   $code = flag_export_flags($data, $features_export['project']);
   return array('flag_default_flags' => $code);
