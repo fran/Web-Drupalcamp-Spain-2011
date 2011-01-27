@@ -113,3 +113,12 @@ function cod_logo_contest_node_info() {
   );
   return $items;
 }
+
+/**
+ * Implementation of hook_views_api().
+ */
+function cod_logo_contest_views_api() {
+  return array(
+    'api' => '2',
+  );
+}
